@@ -1,6 +1,6 @@
 package sef.module10.sample;
 // Complete Code
-class PollingSample {
+public class PollingSample {
 	
 	public static void main(String arg[]){
 		AnnoyedDriver d = new AnnoyedDriver();

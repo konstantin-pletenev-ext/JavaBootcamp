@@ -24,6 +24,7 @@ public class ObjectWriterSample {
 			//We use FileOutputStream to save raw bytes to a file
 			ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream(target));
 			out.writeObject(saveMe);
+			
 
 			//Flushes the stream.
 			//This will write any buffered output bytes and flush through to the underlying stream.

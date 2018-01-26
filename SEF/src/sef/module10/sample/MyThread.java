@@ -1,5 +1,5 @@
 package sef.module10.sample;
-//Needs to be completed
+// Needs to be completed
 //1 - extend from Thread class
 class MyThread {
 	

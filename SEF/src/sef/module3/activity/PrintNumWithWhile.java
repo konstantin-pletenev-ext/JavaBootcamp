@@ -17,13 +17,11 @@ public class PrintNumWithWhile {
 		
 		// Print all even numbers less than 100
 		int i = 0;
-		while(i<100){
+		// Complete code. write while loop for i
 			System.out.println(i);
 			i=i+2;			
 		}
-		
-		 
-		// write code to Print all odd numbers less than 100
+			
 
 	}
 

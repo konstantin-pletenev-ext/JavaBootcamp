@@ -1,5 +1,5 @@
 package sef.module8.sample;
-// Needs to be completed
+//Needs to be completed
 //Extending from Exception class makes CustomException a Checked Exception
 public class CustomException extends Exception{
 

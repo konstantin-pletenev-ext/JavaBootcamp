@@ -11,7 +11,7 @@ public class FileReadSample {
 		
 		File thisFile = new File(".\\src\\sef\\module11\\sample\\TestFile.txt");
 		try {
-			System.out.print("Reading contents of " + thisFile.getCanonicalPath());
+			System.out.print("Reading contents of " + thisFile.getAbsolutePath());
 			BufferedReader in = new BufferedReader(new FileReader(thisFile));
 			
 			String line="\n";

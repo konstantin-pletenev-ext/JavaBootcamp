@@ -1,5 +1,5 @@
 package sef.module13.sample;
-//Needs to be completed
+// Needs to be completed
 import java.sql.*;
 
 public class ConnectionSample {
