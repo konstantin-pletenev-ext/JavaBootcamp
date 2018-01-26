@@ -1,0 +1,35 @@
+<?xml version="1.0" ?>
+
+<XML_XSD_Samples xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="Samples.xsd">
+
+	<Sample_1>
+		<first_name>Michael Angelo</first_name>
+		<first_name>Luis</first_name>
+	</Sample_1>
+
+	<Sample_2>
+		<dog dog_tag_number="100012">Spike</dog>
+	</Sample_2>
+
+	<Sample_3>
+		<computer serial_ID="103A-0212-00A7-101B" />
+	</Sample_3>
+
+	<Sample_4>
+		<car>
+			<color>red</color>
+			<wheels>4</wheels>
+		</car>
+	</Sample_4>
+
+	<Sample_5>
+		<letter> Dear Mrs.
+			<name>Erika Daniels</name>. Your child, 
+			<child_name>Michael</child_name>, has done something at school. 
+			Please come to the prinicipal�s office anytime tomorrow,
+			<schedule>2008-08-21</schedule>. 
+		</letter> 
+	</Sample_5>
+
+</XML_XSD_Samples>

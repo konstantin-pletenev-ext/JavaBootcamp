@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:element name="XML_XSD_Samples" type="root"/>
+<xs:complexType name="root">
+   	<!-- child elements can appear in any order  -->
+   	<xs:all>
+    	<xs:element name="Sample_1" type="sample1"/>
+     	<xs:element name="Sample_2" type="sample2"/>
+     	<xs:element name="Sample_3" type="sample3"/>
+     	<xs:element name="Sample_4" type="sample4"/>
+     	<xs:element name="Sample_5" type="sample5"/>
+   	</xs:all>
+</xs:complexType>
+
+<xs:complexType name="sample1">
+	<xs:sequence>
+		<!-- first_name should appear 2 to 5 times inside Sample_1  -->
+		<xs:element name="first_name" type="xs:string" minOccurs="2" maxOccurs="5"/>
+	</xs:sequence> 
+</xs:complexType>
+
+<xs:complexType name="sample2">  
+	<xs:sequence>  
+		<xs:element name="dog" type="dogType"/>
+	</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="dogType">
+	<!-- extending the element through its base type "string" and adding an attribute "dog_tag_number" -->
+	<xs:simpleContent> 
+        <xs:extension base="xs:string"> 
+        	<xs:attribute name="dog_tag_number" type="xs:integer" />  
+        </xs:extension> 
+    </xs:simpleContent> 
+</xs:complexType>
+
+<xs:complexType name="sample3">  
+	<xs:sequence>  
+		<xs:element name="computer" type="computerType"/>
+	</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="computerType">    
+    <xs:attribute name="serial_ID"> 
+    <!-- extending the type "string" and adding restriction to the value -->
+    	<xs:simpleType>
+    		<xs:restriction base="xs:string">
+    			<!-- this should be the pattern of the value 3DL-4D-2DLD-3DL where D stands for digit and L stand for capital letter -->
+    			<xs:pattern value="[0-9]{3}[A-Z]-[0-9]{4}-[0-9]{2}[A-Z][0-9]-[0-9]{3}[A-Z]"/> 
+    		</xs:restriction>
+    	</xs:simpleType>
+  	</xs:attribute>		
+</xs:complexType>
+
+<xs:complexType name="sample4">  
+	<xs:sequence>  
+		<xs:element name="car" type="carType"/>
+	</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="carType">
+	<xs:sequence>
+		<xs:element name="color" type="xs:string"/>
+		<xs:element name="wheels" type="xs:string"/>
+	</xs:sequence> 
+</xs:complexType>
+
+<xs:complexType name="sample5">  
+	<xs:sequence>  
+		<xs:element name="letter" type="letterType" maxOccurs="1"/>
+	</xs:sequence>
+</xs:complexType>
+
+ <!-- mixed="true" means that this element type can contain both other elements and text -->
+<xs:complexType name="letterType" mixed="true"> 
+    <xs:sequence> 
+	    <xs:element name="name" type="xs:string"/> 
+        <xs:element name="child_name" type="xs:string"/>   
+        <xs:element name="schedule" type="xs:date"/> 
+    </xs:sequence> 
+</xs:complexType>
+
+</xs:schema>

@@ -1,0 +1,16 @@
+<!-- This is a comment in DTD-->
+<!-- people_list element should have 
+     0 or more (represented by *) person element within-->
+<!ELEMENT people_list (person*)>
+<!-- people element should have one name element, one birthdate element, 
+	 optional gender element and optional socialsecuritynumber element
+     (represented by ?) within-->
+<!ELEMENT person (name, birthdate, gender?, socialsecuritynumber?)>
+<!-- name element should have data(represented by #PCDATA) within-->
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT birthdate (#PCDATA)>
+<!ELEMENT gender (#PCDATA)>
+<!ELEMENT socialsecuritynumber (#PCDATA)>
+
+
+

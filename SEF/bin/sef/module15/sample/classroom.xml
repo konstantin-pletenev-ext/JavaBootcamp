@@ -1,0 +1,15 @@
+<?xml version="1.0" ?> 	
+<classroom>
+	<teacher>
+		<first_name>Victoria</first_name>
+		<last_name>Brooke</last_name>
+		<gender>Female</gender>
+		<age>30</age>
+	</teacher>
+	<student>
+		<first_name>Michael</first_name>
+		<last_name>Rogers</last_name>
+		<gender>Male</gender>
+		<age>18</age>
+	</student>
+</classroom>

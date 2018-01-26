@@ -1,0 +1,13 @@
+<?xml version="1.0" ?> 	
+<class_list  year="3"  section="B">
+	<student  id="B-0001">
+		<first_name>Anna</first_name>
+		<last_name>Sanders</last_name>
+		<gender>Female</gender>
+	</student>
+	<student  id="B-0002">
+		<first_name>John</first_name>
+		<last_name>dela Cruz</last_name>
+		<gender>Male</gender>
+	</student>
+</class_list>

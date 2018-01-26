@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<!-- declared person as a complex element  -->
+<xs:element name="person">
+    <xs:complexType>
+    <!-- internal element must follow the sequence below  -->    
+      <xs:sequence>
+	<!-- this is a simple element -->
+	<xs:element name="first_name" type="xs:string"/>
+	<xs:element name="last_name" type="xs:string"/>
+	<xs:element name="gender" type="xs:string"/>
+	<xs:element name="age" type="xs:integer"/>
+      </xs:sequence>
+    </xs:complexType>
+</xs:element>
+</xs:schema>
