@@ -11,3 +11,6 @@
 3) git pull - get last version
 4) git commit -m "[name]"  - save local changes 
 5) git push - push changes to git server
+
+# Slides
+https://github.com/konstantin-pletenev-ext/JavaBootcamp/tree/konstantin-pletenev/TABootcamp_JavaPresentations
