@@ -9,8 +9,10 @@ public class InheritanceActivity {
 		// Create Person object and set name of Person as Sarah Johnson
 		// and age as 21
 		Person_I p = new Person_I();
+		Person_I pWithParams = new Person_I("name", 12);
+		pWithParams.getName();
 		p.setName("Sarah Johnson");
-		p.setAge(21);
+		p.setAge(Integer.parseInt("21"));
 		
 		System.out.println("-----------------------------");
 		//Create Employee object and 

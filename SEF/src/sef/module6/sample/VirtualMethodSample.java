@@ -1,7 +1,7 @@
 package sef.module6.sample;
 
 public class VirtualMethodSample {
-	public static void main(String arg[]){
+	public void main(String arg[]){
 		Person_P p = new Person_P();
 		p.setName("John Doe");
 		
@@ -14,8 +14,12 @@ public class VirtualMethodSample {
 	
 		rollCall(p);
 		rollCall(s);
+
+		int i = 0;
+		test(i);
+
 	}
-	
+
 	public static void rollCall(Person_P temp){
 			temp.announce();
 	}

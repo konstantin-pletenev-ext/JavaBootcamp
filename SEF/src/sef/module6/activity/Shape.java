@@ -9,7 +9,7 @@ public abstract class Shape {
 	
 	abstract public double calculateArea();
 	abstract public double calculatePerimeter();
-	
+
 	public void setColor(String c) {
 		color = c;
 	}
