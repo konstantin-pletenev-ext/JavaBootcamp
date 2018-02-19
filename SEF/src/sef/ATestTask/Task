@@ -41,11 +41,15 @@ setName("Ivan3") should throw the exception
 
 1) Think how to include abstraction and interfaces, for example create abstraction Humanity
 2) Try to save employee list in to TXT file on HDD
-3) Sort employees by first and second name
-4) in secondActivityTest try to implement test ->
+3) Develop println of n Fibonacci_number https://en.wikipedia.org/wiki/Fibonacci_number
+    For example if user put 7 -> 0 1 1 2 3 5 8. if user put 10 -> 0 1 1 2 3 5 8 13 21 34
+
+4) Sort employees by first and second name
+5) in secondActivityTest try to implement test ->
    public void testDivideThrowError()
  and check if trying to divide by 0 the correct exception in place
 
-5)BONUS level - In second activity try to implement user interface for:
+6)BONUS level - In second activity try to implement user interface for:
   		// 1) insert values from keyboard
   		// 2) choose type of calculation
+
