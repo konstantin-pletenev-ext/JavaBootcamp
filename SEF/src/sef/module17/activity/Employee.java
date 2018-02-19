@@ -8,7 +8,6 @@ public class Employee {
 
     public Employee(int id, String name, double sal){
         this.empId = id;
-        this.name = name;
         this.salary = sal;
     }
 
@@ -60,6 +59,6 @@ public class Employee {
         return salary;
     }
     public void setSalary(int salary) {
-        this.salary = salary;
+        salary = salary;
     }
 }

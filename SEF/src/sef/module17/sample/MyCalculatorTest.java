@@ -101,7 +101,12 @@ public class MyCalculatorTest extends TestCase {
 		assertEquals(2, (theCalculator.getQuotient(a,b)),0);		
 		//	Checks if negative value is divided with negative value: b < a
 		assertEquals(0.5, (theCalculator.getQuotient(b,a)),0);			
-		}
+
+		a=5;
+		b=0;
+		assertEquals(0, theCalculator.getQuotient(a, b));
+
+	}
 		
 		public void testThrowException(){
 			
