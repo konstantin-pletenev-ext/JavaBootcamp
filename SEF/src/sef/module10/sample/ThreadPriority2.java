@@ -1,5 +1,5 @@
 package sef.module10.sample;
-// Complete Code
+
 class ThreadPriority2 extends Thread{
 	  ThreadPriority2(String s){
 super(s);

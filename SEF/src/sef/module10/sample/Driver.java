@@ -9,6 +9,7 @@ public class Driver implements Runnable{
 		this.passenger = passenger;
 		System.out.println("Driver has a passenger!");
 	}
+	
 
 	public void run(){
 		

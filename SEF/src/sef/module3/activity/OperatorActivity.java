@@ -1,3 +1,6 @@
+/**
+ * 
+ */
 package sef.module3.activity;
 
 /**
@@ -15,18 +18,14 @@ public class OperatorActivity {
 		int i = 8;
 		int j = 5;
 		
-		// Subtract numbers
-		int result = i-j;
-		
-		// Print result
-		System.out.println("Difference = " + result);
-		
-		// Add numbers
-		
+		// Find Difference of the two numbers
+				
 		
 		// Print result
 		
 		
+		
+
 	}
 
 }
