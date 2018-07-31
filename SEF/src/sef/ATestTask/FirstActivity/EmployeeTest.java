@@ -6,6 +6,7 @@ import static org.junit.Assert.assertEquals;
 
 public class EmployeeTest {
 
+    //TODO 1 try to get 100% of test coverage
     //Example
     @Test
     public void checkEmployeeCreatedProperly(){

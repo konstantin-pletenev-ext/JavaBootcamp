@@ -15,6 +15,9 @@ public class Employee extends Person {
     //TODO 2 add getters and setters
 
 
+    //TODO 3 override method announce()
+
+
 
 
 }

@@ -45,5 +45,10 @@ public class Person {
 	public void setSecondName(String secondName) {
 		this.secondName = secondName;
 	}
+
+	//TODO 2 add all person info into announce() method
+	public String announce() {
+		return "I am " + getFirstName() + " " + getSecondName();
+	}
 }
 

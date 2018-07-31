@@ -7,7 +7,7 @@ public class ThirdActivity {
 
     public static void main(String[] args) {
         ThirdActivity ta = new ThirdActivity();
-        //TODO handle exception on proper way
+        //TODO 1 handle exception on proper way
         ta.validateUser("Ivan");
         ta.catchExeption();
     }
@@ -25,17 +25,17 @@ public class ThirdActivity {
     void validateUser(String name) {
         String[] validUsers = {"John", "Mike", "Missi", "Peacy"};
         int flag = 0;
-        //TODO if name in a list -> set flag=1
+        //TODO 2 if name in a list -> set flag=1
         // if at the end flag=0 -> throw the exeption
     }
 
     void catchMe(int num1, int num2)
     {
-        //TODO Catch exeption
+        //TODO 3 Catch exeption
             int result=num1/num2;
             System.out.println("The result is :" + result);
 
-            //TODO prints a message "Thank you for using this program." always
+            //TODO 4 prints a message "Thank you for using this program." always
             System.out.println("Thank you for using this program.");
 
     }
