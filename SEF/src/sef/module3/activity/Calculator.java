@@ -11,8 +11,8 @@ public class Calculator {
 		
 	public static void main(String[] args) {
 		
-	int x = 10;
-	int y = 5;
+	int x = 5;
+	int y = 10;
 	
 	int[] nums = {1, 2, 3, 4};
 	
@@ -32,9 +32,9 @@ public class Calculator {
 	private static int subtract(int x, int y) {
 		int diff = 0;
 		if (x > y) {
-			// complete the code
+			diff = x - y;
 		} else {
-			// complete the code
+			diff = --(x - y);
 		}
 
 		return diff;
@@ -50,12 +50,12 @@ public class Calculator {
 
 	}
 
-	private static int divide(int x, int y) {
+	private static float divide(int x, int y) {
 		int divValue = 0;
 		if (x == 0 || y == 0) {
-			// complete the code
+			System.out.println("Can not divide by 0");
 		} else {
-			// complete the code
+			divValue = x / y;
 		}
 		return divValue;
 

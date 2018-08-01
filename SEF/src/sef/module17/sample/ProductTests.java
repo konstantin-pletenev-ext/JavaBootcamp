@@ -24,5 +24,21 @@ public class ProductTests extends TestCase {
         assertEquals(testPrice, product.getPrice(), 0);
     }
 
+public void testToString() {
+    double price = 123.23;
+    String desctiption = "test description";
+
+    product.setPrice(price);
+    product.setDescription(description);
+
+    //Description: testDescription, Price 123.23
+
+    assertEquals("Description" + description + "; Price"+ price(product.toString());
+
+    assertTrue("n\Expected") + price + "n\Actual": product.toString());
 
 }
+
+private String description;
+
+private String name;

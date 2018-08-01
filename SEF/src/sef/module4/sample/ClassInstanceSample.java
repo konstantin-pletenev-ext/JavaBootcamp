@@ -9,10 +9,13 @@ public class ClassInstanceSample {
 		//Object instance creation using 'new' and passing parameters to constructors
 		Person him = new Person("John Doe");
 		Person her = new Person("Jane Doe");
+		Person none = new Person("");
+
 		
 		//Access an object's member method to invoke a behavior
 		System.out.println(him.introduce());
 		System.out.println(her.introduce());
+		System.out.println(none.introduce());
 		
 		// Access and Set the object's attribute using it's setter and getter
 		him.setName("John");

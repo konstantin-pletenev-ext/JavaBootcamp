@@ -36,7 +36,10 @@ public class ListSample {
 	    
 	    //1 - Add 3 more elements to the list - A, B and C
 	    
-	    
+	    list.add("kola");
+	    list.add(15);
+	    list.add(1.5);
+	    list.add(new Student_P());
 	    
 		//call a method which prints this list
 	    ListSample obj=new ListSample();
@@ -49,5 +52,8 @@ public class ListSample {
 		//individual elements of a Collection
 		
 		//2 - Use Iterator to iterate over this list.
-			}
+	for (int i = 0, i < l.size(), i++) {
+		System.out.println(l.get(i));
+	}
+	}
 }
