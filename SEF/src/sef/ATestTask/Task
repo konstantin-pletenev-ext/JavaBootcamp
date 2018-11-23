@@ -28,7 +28,7 @@ Tasks
 6) Create good calculator in SecondActivity
 7) Add tests for calculator
 
-8) Task for 1.5 point - when set firstName and secondName, check no numbers there. ->
+8) When set firstName and secondName, check no numbers there. ->
 setName("Ivan3") should throw the exception
 
 9) In third activity
