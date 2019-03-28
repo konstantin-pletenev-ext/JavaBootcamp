@@ -11,11 +11,10 @@ public class FirstActivity {
 		// TIP - google bubble sort
 		//		System.out.println() result
 
-		//TODO 3 create instance of the Student from class Person ->
-		// use announce()
-		// than try to convert this object to Student
-		// use announce()
-		//		System.out.println() result
+		//TODO 3 create instance of a Student as a Person ->
+		// than ask him introduce()
+		// than make them Student
+		// than ask him introduce()
 
 		//TODO 4 Create method for full change of employee information
 		// for example some employee change his work

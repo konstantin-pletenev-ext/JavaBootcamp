@@ -21,15 +21,15 @@ Tasks
 4) in file FirstActivity
   4.1 create few employees
   4.2 try to print them from top salary to less
-  4.3 create person who became a student, and after that became a employee (must be one instance)
 
 5) Create unit test for ALL classes (example in EmployeeTest)
+    Try to achieve 100% of coverage
 
-6) Create good calculator in SecondActivity
+6) Create a calculator in SecondActivity
 7) Add tests for calculator
 
-8) When set firstName and secondName, check no numbers there. ->
-setName("Ivan3") should throw the exception
+8) In class Person add check when set firstName and secondName, check no numbers there. ->
+setName("Ivan3") should throw the customized exception
 
 9) In third activity
  9.1 create try-catch blocks
@@ -39,17 +39,17 @@ setName("Ivan3") should throw the exception
 
 ###### BONUS ######
 
-1) Think how to include abstraction and interfaces, for example create abstraction Humanity
+1) Think how to include abstraction and interfaces,
+for example create abstraction Humanity for Employee and Students
+
 2) Try to save employee list in to TXT file on HDD
+
 3) Develop println of n Fibonacci_number https://en.wikipedia.org/wiki/Fibonacci_number
     For example if user put 7 -> 0 1 1 2 3 5 8. if user put 10 -> 0 1 1 2 3 5 8 13 21 34
 
 4) Sort employees by first and second name
-5) in secondActivityTest try to implement test ->
-   public void testDivideThrowError()
- and check if trying to divide by 0 the correct exception in place
 
-6)BONUS level - In second activity try to implement user interface for:
+5)In second activity try to implement user interface for:
   		// 1) insert values from keyboard
   		// 2) choose type of calculation
 
