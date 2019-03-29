@@ -5,11 +5,15 @@ public class Person {
 
 //TODO 1 Implement Person Attributes
 
+	private int age;
+	private String firstName;
+	private String secondName;
+
 	//Behavior - default constructor
 	public Person(){
-		this.firstName="Unknown";
-		this.secondName = "Unknown";
-		this.age = 0;
+		this.firstName="Janis";
+		this.secondName = "Berzins";
+		this.age = 24;
 	}
 
 	//Behavior - parameterized constructor
@@ -48,7 +52,7 @@ public class Person {
 
 	//TODO 2 add all person info into announce() method
 	public String announce() {
-		return "I am " + getFirstName() + " " + getSecondName();
+		return "I am " + getFirstName() + " " + getSecondName() + " and I am " + getAge() + " years old.";
 	}
 }
 

@@ -6,8 +6,12 @@ public class EmployeeTest extends TestCase {
 
     public void checkEmployeeCreatedProperly(){
         Employee employee = new Employee();
-        employee.setFirstName("Test1");
-        assertEquals("I am an error message", "Test1", employee.getFirstName());
+        employee.setFirstName("Adams");
+        assertEquals("Adams", employee.getFirstName());
     }
 
-}
+    public void checkEmployeejobTitle(){
+        Employee employ = new Employee();
+        employ.setjobTitle("Tester");
+        assertEquals("Tester", employ.getjobTitle());
+    }
