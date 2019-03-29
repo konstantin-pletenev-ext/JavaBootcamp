@@ -1,54 +1,90 @@
 package sef.ATestTask.FirstActivity;
 
 
-public class Person {
+public abstract class Person {
 
-//TODO 1 Implement Person Attributes
+    //TODO 1 Implement Person Attributes
+    private String firstName;
+    private String secondName;
+    private int age;
 
-	//Behavior - default constructor
-	public Person(){
-		this.firstName="Unknown";
-		this.secondName = "Unknown";
-		this.age = 0;
-	}
+    public Person() {
+    }
 
-	//Behavior - parameterized constructor
-	public Person(String firstName, String secondName, int age){
-		this.firstName = firstName;
-		this.secondName = secondName;
-		this.age = age;
-	}
+    public Person(String firstName, String secondName) {
+        setFirstName(firstName);
+        setSecondName(secondName);
+    }
 
-	// getter for String firstName
-	public String getFirstName() {
-		return firstName;
-	}
+    //Behavior - parameterized constructor
+    public Person(String firstName, String secondName, int age) {
+        setFirstName(firstName);
+        setSecondName(secondName);
+        setAge(age);
+    }
 
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
-	}
+    // getter for String firstName
+    public String getFirstName() {
+        return firstName;
+    }
 
-	// getter for int age
-	public int getAge() {
-		return age;
-	}
+    public void setFirstName(String firstName) {
+        this.firstName = firstName.replaceAll("[0-9]", "");
+    }
 
-	// setter for int age
-	public void setAge(int age) {
-		this.age = age;
-	}
+    // getter for int age
+    public int getAge() {
+        return age;
+    }
 
-	public String getSecondName() {
-		return secondName;
-	}
+    // setter for int age
+    public void setAge(int age) {
+        if (age < 0) {
+            throw new IllegalArgumentException("Age cannot be negative!");
+        }
+        this.age = age;
+    }
 
-	public void setSecondName(String secondName) {
-		this.secondName = secondName;
-	}
+    public String getSecondName() {
+        return secondName;
+    }
 
-	//TODO 2 add all person info into announce() method
-	public String announce() {
-		return "I am " + getFirstName() + " " + getSecondName();
-	}
+    public void setSecondName(String secondName) {
+        this.secondName = secondName.replaceAll("[0-9]", "");
+    }
+
+    //TODO 2 add all person info into announce() method
+    public String announce() {
+        return "I am " + getFirstName() + " " + getSecondName();
+    }
+
+    //or this method
+    public void introduce() {
+        System.out.println("My name is " + getFirstName() + " " + getSecondName() + " I am " + getAge() + " years old.");
+    }
+
+//    private String removeSignsFromName(String firstName) {
+//        firstName = firstName.replaceAll(" ", "");
+//        firstName = firstName.replaceAll(".", "");
+//
+//        return firstName.replaceAll("\\^([0-9]+)", "");
+//    }
+//
+//    private String removeSignsFromsecondName(String secondName) {
+//        secondName = secondName.replaceAll(" ", "");
+//        secondName = secondName.replaceAll(".", "");
+//
+//        return secondName.replaceAll("\\^([0-9]+)", "");
+//    }
+
+
+    @Override
+    public String toString() {
+        return "Person{" +
+                "firstName='" + firstName + '\'' +
+                ", secondName='" + secondName + '\'' +
+                ", age=" + age +
+                '}';
+    }
 }
 
