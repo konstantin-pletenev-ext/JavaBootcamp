@@ -1,13 +1,9 @@
 package sef.ATestTask.SecondActivity;
-// Complete Code
+
 import junit.framework.TestCase;
 import org.junit.Test;
 
 public class SecondActivityTest extends TestCase {
-
-
-	//TODO try to achieve 100% of test coverage
-
 	private SecondActivity theCalculator;
 
 	protected void setUp() throws Exception {
@@ -20,19 +16,45 @@ public class SecondActivityTest extends TestCase {
 		super.tearDown();
 	}
 
-	//Example ->
 	@Test
-	public void testGetSumPositiveValue() {
-		assertEquals(15, (theCalculator.getSum(5, 10)));
-		assertEquals(15, (theCalculator.getSum(10, 5)));
+	public void testSumPositiveValue() {
+		assertEquals(15.0, (theCalculator.sum(5, 10)));
+		assertEquals(15.0, (theCalculator.sum(10, 5)));
 	}
 
-	//Example ->
 	@Test
-	public void testGetSumNegativeValue() {
-		assertEquals(5, (theCalculator.getSum(-5, 10)));
-		assertEquals(-5, (theCalculator.getSum(5, -10)));
+	public void testSumNegativeValue() {
+		assertEquals(-5.0, (theCalculator.sum(5, -10)));
+		assertEquals(-5.0, (theCalculator.sum(-10, 5)));
 	}
 
+	@Test
+	public void testSubstractPositiveValue() {
+		assertEquals(5.0, (theCalculator.subtract(10, 5)));
+		assertEquals(-5.0, (theCalculator.subtract(5, 10)));
+	}
+
+	@Test
+	public void testMultiplyPositiveValue() {
+		assertEquals(50.0, (theCalculator.multiply(10, 5)));
+		assertEquals(50.0, (theCalculator.multiply(5, 10)));
+	}
+
+	@Test
+	public void testMultiplyNegativeValue() {
+		assertEquals(-50.0, (theCalculator.multiply(-10, 5)));
+		assertEquals(-50.0, (theCalculator.multiply(5, -10)));
+	}
+
+	@Test
+	public void testDividePositiveValue() {
+		assertEquals(2.0, (theCalculator.divide(10, 5)));
+		assertEquals(0.5, (theCalculator.divide(5, 10)));
+	}
+
+	@Test
+	public void testDivideNegativeValue() {
+		assertEquals(-2.0, (theCalculator.divide(-10, 5)));
+		assertEquals(-0.5, (theCalculator.divide(5, -10)));
+	}
 }
-
