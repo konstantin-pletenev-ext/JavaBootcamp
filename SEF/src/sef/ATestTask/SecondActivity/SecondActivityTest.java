@@ -32,7 +32,14 @@ public class SecondActivityTest extends TestCase {
 	public void testGetSumNegativeValue() {
 		assertEquals(5, (theCalculator.getSum(-5, 10)));
 		assertEquals(-5, (theCalculator.getSum(5, -10)));
+
 	}
+	public void testDifferenceValue(){
+		assertEquals(0, (theCalculator.getDifference(10,10)));
+
+	}
+
+
 
 }
 
