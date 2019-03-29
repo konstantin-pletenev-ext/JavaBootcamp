@@ -28,8 +28,8 @@ Tasks
 6) Create a calculator in SecondActivity
 7) Add tests for calculator
 
-8) In class Person add check when set firstName and secondName, check no numbers there. ->
-setName("Ivan3") should throw the customized exception
+In class Person add check when set firstName and secondName, check no numbers there. ->
+setName("Ivan3") should throw the customized exception8)
 
 9) In third activity
  9.1 create try-catch blocks

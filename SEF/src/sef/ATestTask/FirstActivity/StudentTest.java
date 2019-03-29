@@ -1,4 +1,6 @@
 package sef.ATestTask.FirstActivity;
 
-public class StudentTest {
+import junit.framework.TestCase;
+
+public class StudentTest extends TestCase {
 }
