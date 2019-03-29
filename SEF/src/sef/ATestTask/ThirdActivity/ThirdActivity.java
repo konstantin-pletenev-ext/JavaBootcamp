@@ -3,6 +3,8 @@ package sef.ATestTask.ThirdActivity;
 //This program accepts a user name and checks user's validity
 //The user name is checked against an array of names.
 
+import static org.junit.Assert.assertEquals;
+
 public class ThirdActivity {
 
     public static void main(String[] args) {
@@ -10,15 +12,22 @@ public class ThirdActivity {
         //TODO handle exception on proper way
         ta.validateUser("Ivan");
         ta.catchExeption();
+        ta.testThrowException();
     }
 
-    void catchExeption() {
-        int[] arr = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
-
+    public static void catchExeption() {
+        int[] arr = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+        try{
         for (int i = 0; i <= 10; i++) {
             System.out.println(arr[i]);
+        }}
+        catch (ArrayIndexOutOfBoundsException e){
+            System.out.println("Here's an exception");
         }
-        System.out.println("This should get printed even if there is an exception");
+        finally {
+            System.out.println("This should get printed even if there is an exception");
+        }
+
 
     }
 
@@ -29,14 +38,25 @@ public class ThirdActivity {
         // if at the end flag=0 -> throw the exeption
     }
 
-    void catchMe(int num1, int num2)
-    {
-        //TODO Catch exeption
-            int result=num1/num2;
-            System.out.println("The result is :" + result);
 
-            //TODO prints a message "Thank you for using this program." always
-            System.out.println("Thank you for using this program.");
+    // //TODO Catch exeption
+
+   public double getDivide (double a, double b) {
+       if (b == 0)
+           throw new IllegalArgumentException("Divided by 0");
+       return a / b;
+   }
+    public void testThrowException(){
+        try{
+            System.out.println("The result is "+ getDivide(2,5));
+            System.out.println("The result is "+ getDivide(2,8));
+        }
+        catch (IllegalArgumentException e) {
+            assertEquals("Divided by 0", e.getMessage());
+        }
+        finally { //TODO prints a message "Thank you for using this program." always
+                System.out.println("Thank you for using this program.");
+            }
 
     }
 }

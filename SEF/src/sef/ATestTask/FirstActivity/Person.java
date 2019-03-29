@@ -1,9 +1,16 @@
 package sef.ATestTask.FirstActivity;
 
 
+import java.util.regex.Pattern;
+
 public class Person {
 
 //TODO 1 Implement Person Attributes
+
+	//Attributes
+	private String firstName;
+	private String secondName;
+	private int age;
 
 	//Behavior - default constructor
 	public Person(){
@@ -48,7 +55,8 @@ public class Person {
 
 	//TODO 2 add all person info into announce() method
 	public String announce() {
-		return "I am " + getFirstName() + " " + getSecondName();
+		return "My name is  " + getFirstName() + " " + getSecondName() +
+				" and I am "+getAge() + " years old.";
 	}
 }
 
