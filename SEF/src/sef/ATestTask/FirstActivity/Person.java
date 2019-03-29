@@ -1,9 +1,10 @@
 package sef.ATestTask.FirstActivity;
 
+public class Person extends Human {
 
-public class Person {
-
-//TODO 1 Implement Person Attributes
+    private String firstName;
+    private String secondName;
+    private int age;
 
 	//Behavior - default constructor
 	public Person(){
@@ -13,9 +14,9 @@ public class Person {
 	}
 
 	//Behavior - parameterized constructor
-	public Person(String firstName, String secondName, int age){
-		this.firstName = firstName;
-		this.secondName = secondName;
+	public Person(String firstName, String secondName, int age) throws InvalidPersonNameException {
+		this.setFirstName(firstName);
+		this.setSecondName(secondName);
 		this.age = age;
 	}
 
@@ -24,8 +25,12 @@ public class Person {
 		return firstName;
 	}
 
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
+	public void setFirstName(String firstName) throws InvalidPersonNameException {
+	    if (firstName != null && checkName(firstName)){
+            this.firstName = firstName;
+        } else {
+	        throw new InvalidPersonNameException();
+        }
 	}
 
 	// getter for int age
@@ -42,13 +47,30 @@ public class Person {
 		return secondName;
 	}
 
-	public void setSecondName(String secondName) {
-		this.secondName = secondName;
+	public void setSecondName(String secondName) throws InvalidPersonNameException {
+	    if (secondName != null && checkName(secondName)) {
+            this.secondName = secondName;
+        } else {
+	        throw new InvalidPersonNameException();
+        }
 	}
 
-	//TODO 2 add all person info into announce() method
 	public String announce() {
-		return "I am " + getFirstName() + " " + getSecondName();
+		return "My name is " + getFirstName() + " " + getSecondName() + " and i am " + getAge() + " years old";
 	}
+
+	private static boolean checkName(String name){
+        for (int i = 0; i < name.length(); i++){
+            if (Character.isDigit(name.charAt(i))){
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+    public void somethingThatAHumanWouldDo(){
+        System.out.println("This human thinks he is a person and does things accordingly");
+    }
 }
 
