@@ -1,13 +1,21 @@
 package sef.ATestTask.FirstActivity;
 
-import junit.framework.TestCase;
+import org.junit.Test;
 
-public class EmployeeTest extends TestCase {
+import static junit.framework.TestCase.assertEquals;
 
+public class EmployeeTest {
+
+    @Test
     public void checkEmployeeCreatedProperly(){
-        Employee employee = new Employee();
-        employee.setFirstName("Test1");
-        assertEquals("I am an error message", "Test1", employee.getFirstName());
+        Employee emp = new Employee("Name", "Surname", 33, 5, "Job", "Company", 2.0);
+        assertEquals("Name", emp.getFirstName());
+        assertEquals("Surname", emp.getSecondName());
+        assertEquals(33, emp.getAge());
+        assertEquals(5, emp.getEmpId());
+        assertEquals("Job", emp.getJobTitle());
+        assertEquals("Company", emp.getCompanyName());
+        assertEquals(2.0, emp.getSalary());
     }
 
 }

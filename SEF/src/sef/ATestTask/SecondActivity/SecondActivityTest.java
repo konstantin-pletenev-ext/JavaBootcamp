@@ -33,6 +33,33 @@ public class SecondActivityTest extends TestCase {
 		assertEquals(5, (theCalculator.getSum(-5, 10)));
 		assertEquals(-5, (theCalculator.getSum(5, -10)));
 	}
+	public void testMultiplication(){
+		assertEquals(10, (theCalculator.mult(5 ,2)));
+		assertEquals(-10, (theCalculator.mult(-2 ,5)));
+	}
+	public void testSubtraction(){
+		assertEquals(3, (theCalculator.sub(5 ,2)));
+		assertEquals(-7, (theCalculator.sub(-2 ,5)));
+		assertEquals(3, (theCalculator.sub(-2 ,-5)));
+	}
+	public void testDivision() {
+
+		assertEquals(2., theCalculator.divide(10,5), 0.);
+		assertEquals(0., (theCalculator.divide(10,0)), 0.);
+		assertEquals(-3., (theCalculator.divide(9,-3)), 0.);
+		assertEquals(2., (theCalculator.divide(-10,-5)), 0.);
+		assertEquals(0.5, (theCalculator.divide(-5,-10)), 0.);
+	}
+
+	public void testThrowException(){
+		try {
+			theCalculator.getSum(5, 10);
+			theCalculator.mult(5,2);
+			new SecondActivity();
+		} catch (Exception e1) {
+			fail();
+		}
+	}
 
 }
 
