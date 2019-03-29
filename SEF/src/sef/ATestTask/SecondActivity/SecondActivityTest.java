@@ -26,8 +26,6 @@ public class SecondActivityTest extends TestCase {
     public void testGetSumPositiveValue() {
         assertEquals(15, (theCalculator.add(5, 10)));
         assertEquals(15, (theCalculator.add(10, 5)));
-        assertEquals(20.3, (theCalculator.add(20, 0.3)));
-        assertEquals(20.3, (theCalculator.add(0.3, 20)));
     }
 
     //Example ->
@@ -35,21 +33,94 @@ public class SecondActivityTest extends TestCase {
     public void testGetSumNegativeValue() {
         assertEquals(-15, (theCalculator.add(-5, -10)));
         assertEquals(-15, (theCalculator.add(-10, -5)));
-        assertEquals(-5.5, (theCalculator.add(-5, -0.5)));
-        assertEquals(-5, (theCalculator.add(-0.5, -5)));
-        assertEquals(-5, (theCalculator.add(5, -10)));
-        assertEquals(-5, (theCalculator.add(-10, 5)));
-        assertEquals(-1, (theCalculator.add(2.5, -3.5)));
-        assertEquals(-1, (theCalculator.add(-3.5, 2.5)));
+        assertEquals(-5, (theCalculator.add(10, -15)));
+        assertEquals(-5, (theCalculator.add(-15, 10)));
     }
 
     @Test
     public void testGetSubPositiveValue() {
-        assertEquals(5, (theCalculator.substract(10, 5);));
-        assertEquals(9, (theCalculator.substract(9.3, 0.3);));
-        assertEquals(20.3, (theCalculator.substract(20, 0.3);));
-        assertEquals(20.3, (theCalculator.substract(0.3, 20););)
+        assertEquals(5, (theCalculator.sub(10, 5)));
+        assertEquals(10, (theCalculator.sub(5, -5)));
+        assertEquals(5, (theCalculator.sub(-5, -10)));
     }
+
+    @Test
+    public void testGetSubNegativeValue() {
+        assertEquals(-5, (theCalculator.sub(5, 10)));
+        assertEquals(-15, (theCalculator.sub(-5, 10)));
+        assertEquals(-5, (theCalculator.sub(-10, -5)));
+    }
+
+    @Test
+    public void testGetMultPositiveValue() {
+        assertEquals(50, (theCalculator.mult(10, 5)));
+        assertEquals(25, (theCalculator.mult(-5, -5)));
+        assertEquals(50, (theCalculator.mult(5, 10)));
+    }
+
+    @Test
+    public void testGetMultNegativeValue() {
+        assertEquals(-50, (theCalculator.mult(-5, 10)));
+        assertEquals(-50, (theCalculator.mult(5, -10)));
+    }
+
+    @Test
+    public void testGetDivPositiveValue() {
+        assertEquals(2, (theCalculator.div(10, 5)));
+        assertEquals(0, (theCalculator.div(5, 10)));
+        try {
+            theCalculator.div(5, 0);
+            fail();
+        } catch (ArithmeticException e){
+
+        }
+
+    }
+
+    @Test
+    public void testGetDivNegativeValue() {
+        assertEquals(-2, (theCalculator.div(-10, 5)));
+        assertEquals(0, (theCalculator.div(5, -10)));
+        assertEquals(-2, (theCalculator.div(10, -5)));
+        try {
+            theCalculator.div(-5, 0);
+            fail();
+        } catch (ArithmeticException e){
+
+        }
+    }
+
+    @Test
+    public void testGetModPositiveValue() {
+        assertEquals(0, (theCalculator.mod(10, 5)));
+        assertEquals(1, (theCalculator.mod(10, 3)));
+        assertEquals(5, (theCalculator.mod(5, 10)));
+        assertEquals(5, (theCalculator.mod(5, -10)));
+        try {
+            theCalculator.mod(5, 0);
+            fail();
+        } catch (ArithmeticException e){
+
+        }
+
+    }
+
+    @Test
+    public void testGetModNegativeValue() {
+        assertEquals(0, (theCalculator.mod(-10, 5)));
+        assertEquals(-1, (theCalculator.mod(-10, 3)));
+        assertEquals(-5, (theCalculator.mod(-5, 10)));
+        assertEquals(-5, (theCalculator.mod(-5, -10)));
+        try {
+            theCalculator.mod(-5, 0);
+            fail();
+        } catch (ArithmeticException e){
+
+        }
+
+    }
+
+
 
 }
 

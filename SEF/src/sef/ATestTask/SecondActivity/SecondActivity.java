@@ -7,12 +7,11 @@ public class SecondActivity {
         SecondActivity calculator = new SecondActivity();
 
         //TODO Use the calculator to calculate different values
-        calculator.add(10.2, 5);
-        calculator.substract(5, 10);
-        calculator.dividefloat(100, 33);
-        calculator.divide(100, 33);
-        calculator.mod(97, 33);
-        calculator.multiply(35, 3);
+        System.out.println(calculator.add(10, 5));
+        System.out.println(calculator.sub(5, 10));
+        System.out.println(calculator.div(100, 33));
+        System.out.println(calculator.mod(97, 33));
+        System.out.println(calculator.mult(35, 3));
     }
 
     //TODO create the Calculator (here or in additional class)
@@ -89,6 +88,36 @@ public class SecondActivity {
 //        else
 //            return String.format("%s",number);
 //}
+
+    public int add(int x, int y) {
+        return x + y;
+    }
+
+    // Subtract
+    public int sub(int x, int y) {
+        return x - y;
+    }
+
+    // Multiply
+    public int mult(int x, int y) {
+        return x * y;
+    }
+
+    public int div(int x, int y) {
+        if (y != 0) {
+            return x / y;
+        } else {
+            throw new ArithmeticException("Argument 'divisor' is 0!");
+        }
+    }
+
+    public int mod(int x, int y) {
+        if (y != 0) {
+            return x % y;
+        } else {
+            throw new ArithmeticException();
+        }
+    }
 }
 
 
