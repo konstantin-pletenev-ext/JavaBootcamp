@@ -6,6 +6,8 @@ Tasks
   1.2 Add method for introduce of person ->
    "My name is <name> and i am <age> years old"
 
+   done
+
 2) In file Employee
   2.1 Add different constructors
   2.2 Add getters and setters
@@ -13,23 +15,38 @@ Tasks
   "My name is <name> and i am <age> years old
    I am work as <jobTitle> in <company>"
 
+   done
+
 3) in file Students
   3.1 Create file students from scratch
   3.2 Add method for introduce of person ->
         "I am study in university <schoolName>"
+    done
 
 4) in file FirstActivity
   4.1 create few employees
   4.2 try to print them from top salary to less
 
+  done
+
 5) Create unit test for ALL classes (example in EmployeeTest)
     Try to achieve 100% of coverage
 
+done
+
 6) Create a calculator in SecondActivity
+
+done
+
+
 7) Add tests for calculator
+
+done
 
 8) In class Person add check when set firstName and secondName, check no numbers there. ->
 setName("Ivan3") should throw the customized exception
+
+done
 
 9) In third activity
  9.1 create try-catch blocks
