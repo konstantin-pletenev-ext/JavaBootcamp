@@ -1,5 +1,6 @@
 package sef.ATestTask.FirstActivity;
 
+
 public class Employee extends Person {
 
     private int empId;
@@ -7,17 +8,35 @@ public class Employee extends Person {
     private String companyName;
     private double salary;
 
-    //TODO 1 create different constructors
     public Employee(){
 
     }
 
-    //TODO 2 add getters and setters
+    public Employee(String firstName, String secondName, int age, int empId, String jobTitle, String companyName, double salary) {
+        super(firstName, secondName, age);
+        this.empId = empId;
+        this.jobTitle = jobTitle;
+        this.companyName = companyName;
+        this.salary = salary;
+    }
 
+    public int getempId() { return empId; }
+    public void  setEmpId(int empId) {this.empId = empId;}
+    public double getSalary() { return salary; }
+    public void setSalary(double salary) { this.salary = salary;}
+    public String getjobTitle() { return jobTitle;}
+    public void setjobTitle(String jobTitle) { this.jobTitle = jobTitle; }
 
-    //TODO 3 override method announce()
+    public String getCompanyName() {
+        return companyName;
+    }
+    public void setCompanyName(String companyName) { this.companyName = companyName;}
 
-
+    public String announce() {
+        return "My name is" + getFirstName() + " " + getSecondName() +
+                " I am " + getAge() + " years old" + getjobTitle() + " I am work in " + getCompanyName() + ".";
+    }
 
 
 }
+
