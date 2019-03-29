@@ -1,13 +1,25 @@
 package sef.ATestTask.FirstActivity;
 
 import junit.framework.TestCase;
+import org.junit.Test;
+import sef.ATestTask.ThirdActivity.CustomException;
 
 public class EmployeeTest extends TestCase {
 
-    public void checkEmployeeCreatedProperly(){
+    @Test
+    public void checkEmployeeName(){
         Employee employee = new Employee();
-        employee.setFirstName("Test1");
-        assertEquals("I am an error message", "Test1", employee.getFirstName());
+        try{
+            employee.setFirstName("Test1");
+            fail();
+        }catch (CustomException e) {
+
+        }try{
+            employee.setFirstName("Test");
+        }catch (CustomException e) {
+            fail();
+        }
+
     }
 
 }

@@ -1,7 +1,16 @@
 package sef.ATestTask.FirstActivity;
 
 
+
+
+//TOO MUCH CHAOS IN THESE CLASSES :(
+
+
+
 public class Person {
+	private String secondName;
+	private String firstName;
+	private int age;
 
 //TODO 1 Implement Person Attributes
 
@@ -48,7 +57,7 @@ public class Person {
 
 	//TODO 2 add all person info into announce() method
 	public String announce() {
-		return "I am " + getFirstName() + " " + getSecondName();
+		return "I am " + getFirstName() + " " + getSecondName() + " and I am " + getAge() + " years old.";
 	}
 }
 
