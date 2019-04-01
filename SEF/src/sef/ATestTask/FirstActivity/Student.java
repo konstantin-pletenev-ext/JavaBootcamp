@@ -9,6 +9,8 @@ public class Student extends Person {
 
     //Behavior - default constructor
     public Student(){
+        this.school = "Unknown";
+        this.grade = 0;
 
     }
 
