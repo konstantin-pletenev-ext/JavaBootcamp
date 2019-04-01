@@ -11,7 +11,7 @@ public class SecondActivity {
         System.out.println(calculator.sub(5, 10));
         System.out.println(calculator.div(100, 33));
         System.out.println(calculator.mod(97, 33));
-        System.out.println(calculator.mult(35, 3));
+        System.out.println(calculator.multi(35, 3));
     }
 
     //TODO create the Calculator (here or in additional class)
@@ -99,7 +99,7 @@ public class SecondActivity {
     }
 
     // Multiply
-    public int mult(int x, int y) {
+    public int multi(int x, int y) {
         return x * y;
     }
 

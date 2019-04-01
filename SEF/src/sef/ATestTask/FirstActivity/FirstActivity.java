@@ -66,6 +66,8 @@ public class FirstActivity {
         f.setCompanyName("Accenture");
         f.setSalary(1200.50);
 
+        changeEmployeeData(f);
+
         ArrayList<Employee> ar = new ArrayList<>();
         ar.add(a);
         ar.add(b);
@@ -85,7 +87,7 @@ public class FirstActivity {
 
         Collections.sort(ar, new Sort());
 
-        Boolean badScenario = false;
+        boolean badScenario = false;
         for (int i = 0; i < ar.size(); i++) {
             Employee emp = ar.get(i);
             // Create a Pattern object
@@ -95,14 +97,12 @@ public class FirstActivity {
             Matcher m = p.matcher(emp.getFirstName());
             Matcher m2 = p.matcher(emp.getSecondName());
             if (!m.find()) {
-                System.out.println("Error: " + emp.getFirstName() + " is not a name!");
+                System.out.println("Error: " + emp.getFirstName() + " is not a name! Please, correct the data!");
                 badScenario = true;
-                break;
             }
             if (!m2.find()) {
-                System.out.println("Error: " + emp.getSecondName() + " is not a surname!");
+                System.out.println("Error: " + emp.getSecondName() + " is not a surname! Please, correct the data!");
                 badScenario = true;
-                break;
             }
         }
 
@@ -124,31 +124,34 @@ public class FirstActivity {
             System.out.println();
 
             //TODO 3 create instance of a Student as a Person ->
-
-            Person g = new Person();
-            g.setFirstName("Maksims");
-            g.setSecondName("Snezkins");
-            g.setAge(22);
+            Person person = new Person();
+            person.setFirstName("Maksims");
+            person.setSecondName("Snezkins");
+            person.setAge(22);
 
             // than ask him introduce()
-            System.out.println(g.announce());
+            System.out.println(person.announce());
 
             // than make them Student
-            Student h = new Student();
-            h.setFirstName("Maksims");
-            h.setSecondName("Snezkins");
-            h.setAge(22);
-            h.setSchool("University of Latvia");
-            h.setGrade(7);
+            Student student = (Student) person;
+            student.setSchool("University of Latvia");
+            student.setGrade(7);
 
             // than ask him introduce()
-            System.out.println(h.announce());
-
-            //TODO 4 Create method for full change of employee information
-            // for example some employee change his work
+            System.out.println(student.announce());
 
 
         }
+    }
+
+    //TODO 4 Create method for full change of employee information
+    // for example some employee change his work
+    public static void changeEmployeeData(Employee employee) {
+
+        employee.setJobTitle("lead tester");
+        employee.setSalary(1500);
+
+        System.out.println(employee.announce());
     }
 }
 

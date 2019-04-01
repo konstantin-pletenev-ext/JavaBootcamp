@@ -52,16 +52,16 @@ public class SecondActivityTest extends TestCase {
     }
 
     @Test
-    public void testGetMultPositiveValue() {
-        assertEquals(50, (theCalculator.mult(10, 5)));
-        assertEquals(25, (theCalculator.mult(-5, -5)));
-        assertEquals(50, (theCalculator.mult(5, 10)));
+    public void testGetMultiPositiveValue() {
+        assertEquals(50, (theCalculator.multi(10, 5)));
+        assertEquals(25, (theCalculator.multi(-5, -5)));
+        assertEquals(50, (theCalculator.multi(5, 10)));
     }
 
     @Test
-    public void testGetMultNegativeValue() {
-        assertEquals(-50, (theCalculator.mult(-5, 10)));
-        assertEquals(-50, (theCalculator.mult(5, -10)));
+    public void testGetMultiNegativeValue() {
+        assertEquals(-50, (theCalculator.multi(-5, 10)));
+        assertEquals(-50, (theCalculator.multi(5, -10)));
     }
 
     @Test
