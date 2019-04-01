@@ -1,0 +1,55 @@
+
+Tasks
+
+1) in file Person
+  1.1 Based on code implement Person attributes
+  1.2 Add method for introduce of person ->
+   "My name is <name> and i am <age> years old"
+
+2) In file Employee
+  2.1 Add different constructors
+  2.2 Add getters and setters
+  2.3 Add method for introduce of person ->
+  "My name is <name> and i am <age> years old
+   I am work as <jobTitle> in <company>"
+
+3) in file Students
+  3.1 Create file students from scratch
+  3.2 Add method for introduce of person ->
+        "I am study in university <schoolName>"
+
+4) in file FirstActivity
+  4.1 create few employees
+  4.2 try to print them from top salary to less
+
+5) Create unit test for ALL classes (example in EmployeeTest)
+    Try to achieve 100% of coverage
+
+6) Create a calculator in SecondActivity
+7) Add tests for calculator
+
+8) In class Person add check when set firstName and secondName, check no numbers there. ->
+setName("Ivan3") should throw the customized exception
+
+9) In third activity
+ 9.1 create try-catch blocks
+ 9.2 handel the exceptions
+
+
+
+###### BONUS ######
+
+1) Think how to include abstraction and interfaces,
+for example create abstraction Humanity for Employee and Students
+
+2) Try to save employee list in to TXT file on HDD
+
+3) Develop println of n Fibonacci_number https://en.wikipedia.org/wiki/Fibonacci_number
+    For example if user put 7 -> 0 1 1 2 3 5 8. if user put 10 -> 0 1 1 2 3 5 8 13 21 34
+
+4) Sort employees by first and second name
+
+5)In second activity try to implement user interface for:
+  		// 1) insert values from keyboard
+  		// 2) choose type of calculation
+

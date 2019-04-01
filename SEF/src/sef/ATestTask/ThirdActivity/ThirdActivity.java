@@ -3,22 +3,20 @@ package sef.ATestTask.ThirdActivity;
 //This program accepts a user name and checks user's validity
 //The user name is checked against an array of names.
 
-import sef.ATestTask.FirstActivity.NewCustomException;
-
 public class ThirdActivity {
 
-    public static void main(String[] args) {
-        ThirdActivity ta = new ThirdActivity();
+    public static void main(String[] args) throws CustomException {
+        ThirdActivity a = new ThirdActivity();
         //TODO handle exception on proper way
-        try {
-            ta.validateUser("Ivan");
-        } catch (NewCustomException e) {
-            System.out.println(e.toString());
-        }
+        a.validateUser("Missi");
 
-        System.out.println("--------------------");
-        ta.catchMe(100, 0);
-        ta.catchMe(10, 5);
+        System.out.println("********************");
+        a.catchMe(100, 0);
+        System.out.println("********************");
+        a.catchMe(10, 5);
+        System.out.println("********************");
+        a.catchException();
+        System.out.println("********************");
     }
 
     void catchException() {
@@ -29,13 +27,13 @@ public class ThirdActivity {
                 System.out.println(arr[i]);
             }
         } catch (ArrayIndexOutOfBoundsException e) {
-            System.out.println("Something goes wrong!");
+            System.out.println("Something is wrong! Check the array size!");
         } finally {
-            System.out.println("This should get printed even if there is an exception");
+            System.out.println("This should get printed even if there is no exception, so you mat not worry.");
         }
     }
 
-    void validateUser(String name) {
+    void validateUser(String name) throws CustomException {
         String[] validUsers = {"John", "Mike", "Missi", "Peacy"};
         boolean flag = false;
         //TODO if name in a list -> set flag=true
@@ -48,20 +46,19 @@ public class ThirdActivity {
             }
         }
         if (!flag) {
-            throw new NewCustomException();
+            throw new CustomException();
         }
     }
 
-    void catchMe(int num1, int num2)
-    {
+    void catchMe(int x, int y) {
         //TODO Catch exception
         try {
-            int result = num1 / num2;
-            System.out.println("The result is :" + result);
+            int result = x / y;
+            System.out.println(x + " + " + y + " = " + result);
         } catch (ArithmeticException e) {
-            System.out.println("Oops! Division by zero is not allowed!");
+            System.out.println("Division by zero is not allowed!");
         } finally {
-            System.out.println("Thank you for using this program!");
+            System.out.println("Thank you for using this division program!");
         }
 
     }

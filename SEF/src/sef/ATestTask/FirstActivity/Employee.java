@@ -12,7 +12,7 @@ public class Employee extends Person {
 
     //TODO 1 create different constructors
     public Employee() {
-        this.jobTitle = "Unknown";
+        this.jobTitle = "unknown";
         this.companyName = "Unknown";
         this.salary = 0;
     }
@@ -66,9 +66,9 @@ public class Employee extends Person {
         // Now create matcher object.
         Matcher m = p.matcher(getJobTitle());
         if (m.find()){
-        return "My name is " + getFirstName() + " " + getSecondName() + ", I am " + getAge() + " years old and I work as an "
+        return "My name is " + getFirstName() + " " + getSecondName() + " and I work as an "
                 + getJobTitle() + " in " + getCompanyName() + "." ;}
-                else return "My name is " + getFirstName() + " " + getSecondName() + ", I am " + getAge() + " years old and I work as a "
+                else return "My name is " + getFirstName() + " " + getSecondName() + " and I work as a "
                 + getJobTitle() + " in " + getCompanyName() + "." ;
     }
 

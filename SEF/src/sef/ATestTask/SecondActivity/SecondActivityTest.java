@@ -26,6 +26,7 @@ public class SecondActivityTest extends TestCase {
     public void testGetSumPositiveValue() {
         assertEquals(15, (theCalculator.add(5, 10)));
         assertEquals(15, (theCalculator.add(10, 5)));
+
     }
 
     //Example ->
