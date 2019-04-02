@@ -14,11 +14,11 @@ public class FirstActivity {
 
 		employeeList.add(new Employee(1, "Writer", "IBM", 100000.0));
 		employeeList.add(new Employee(2, "Artist", "Apple", 110000.0));
-		employeeList.add(new Employee(3,"Corrector", "IBM", 90000.0));
+		employeeList.add(new Employee(3, "Corrector", "IBM", 90000.0));
 		employeeList.add(new Employee(4, "Developer", "Google", 120000.0));
 		employeeList.add(new Employee(5, "Tester", "Google", 95000.0));
 
-		for (int i = 0; i < employeeList.size(); i++){
+		for (int i = 0; i < employeeList.size(); i++) {
 			Employee e = (Employee) employeeList.get(i);
 			System.out.println(e.getEmpId() + " " + e.getJobTitle() + " " + e.getCompanyName() + " " + e.getSalary());
 		}
@@ -40,7 +40,7 @@ public class FirstActivity {
 			}
 		}
 
-		for (int x = 0; x < employeeList.size(); x++){
+		for (int x = 0; x < employeeList.size(); x++) {
 			Employee e = (Employee) employeeList.get(x);
 			System.out.println(e.getEmpId() + " " + e.getJobTitle() + " " + e.getCompanyName() + " " + e.getSalary());
 		}
@@ -60,13 +60,16 @@ public class FirstActivity {
 
 		Person newPerson = anyStudent;
 		System.out.println(newPerson.announce());
-		Student newStudent = (Student)newPerson;
+		Student newStudent = (Student) newPerson;
 		System.out.println(newStudent.announce());
 
 		System.out.println("----------------------------------");
 
 		//TODO 4 Create method for full change of employee information
 		// for example some employee change his work
+
+
+		System.out.println("----------------------------------");
 
 		Employee newEmployee = new Employee();
 		newEmployee.setFirstName("Jim");
@@ -78,7 +81,18 @@ public class FirstActivity {
 		newEmployee.setSalary(10000);
 		newEmployee.announce();
 
-		System.out.println("----------------------------------");
+		System.out.println("Employee information before change - ");
+		System.out.println(newEmployee.announce());
+		System.out.println();
+		System.out.println("Employee information after change - ");
+		changeInfo(newEmployee);
 
+	}
+
+	private static void changeInfo(Employee newEmployee) {
+		newEmployee.setJobTitle("Project Manager");
+		newEmployee.setSalary(1500);
+		newEmployee.setCompanyName("Apple");
+		System.out.println(newEmployee.announce());
 	}
 }
