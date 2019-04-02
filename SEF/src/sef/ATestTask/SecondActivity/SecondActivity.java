@@ -3,8 +3,6 @@ package sef.ATestTask.SecondActivity;
 public class SecondActivity {
 
 	public static void main(String[] args) {
-		SecondActivity calculator = new SecondActivity();
-
 
 		//TODO Use the calculator to calculate different values
 		//Example ->
@@ -27,6 +25,7 @@ public class SecondActivity {
 	}
 
 	//TODO create the Calculator (here or in additional class)
+
 	// see Calculator class
 
 }
