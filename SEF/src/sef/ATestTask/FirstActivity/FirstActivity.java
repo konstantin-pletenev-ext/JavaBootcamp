@@ -68,9 +68,6 @@ public class FirstActivity {
 		//TODO 4 Create method for full change of employee information
 		// for example some employee change his work
 
-
-		System.out.println("----------------------------------");
-
 		Employee newEmployee = new Employee();
 		newEmployee.setFirstName("Jim");
 		newEmployee.setSecondName("First");
@@ -86,6 +83,8 @@ public class FirstActivity {
 		System.out.println();
 		System.out.println("Employee information after change - ");
 		changeInfo(newEmployee);
+
+		System.out.println("----------------------------------");
 
 	}
 

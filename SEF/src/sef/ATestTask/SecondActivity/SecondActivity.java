@@ -19,6 +19,11 @@ public class SecondActivity {
 		myCalculator.getProduct(3, 12);
 		myCalculator.getQuotient(50, 5);
 
+		System.out.println(myCalculator.getSum(10.2, 5));
+		System.out.println(myCalculator.getDifference(100, 33));
+		System.out.println(myCalculator.getProduct(3, 12));
+		System.out.println(myCalculator.getQuotient(50, 5));
+
 	}
 
 	//TODO create the Calculator (here or in additional class)

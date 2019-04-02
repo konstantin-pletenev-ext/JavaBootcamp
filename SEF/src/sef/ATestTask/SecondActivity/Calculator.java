@@ -11,9 +11,14 @@ public class Calculator {
         public double getProduct(double a, double b){
             return a * b;
         }
-        public double getQuotient(double a, double b){
-            return a / b;
-        }
-        //checkFH checkFH
 
+        public double getQuotient(double a, double b) {
+
+            if (b == 0) {
+                throw new ArithmeticException("Illegal operation: division by zero");
+            }
+            else {
+                return a / b;
+            }
+        }
     }
